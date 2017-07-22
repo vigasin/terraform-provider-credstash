@@ -59,9 +59,14 @@ provider "credstash" {
 
 ## Dependencies
 
-For vendoring [govendor][govendor] is used.
+[dep][] is used for dependency management.
+
+Vendored files are not included in the repo. Before making any changes:
+
+1. Install dep: `go get -u github.com/golang/dep/cmd/dep`
+2. Run `make deps`
 
 [credstash]: https://github.com/fugue/credstash
 [awscred]: https://github.com/aws/aws-sdk-go#configuring-credentials
 [provider_binary]: https://github.com/sspinc/terraform-provider-credstash/releases/latest
-[govendor]: https://github.com/kardianos/govendor
+[dep]: https://github.com/golang/dep
